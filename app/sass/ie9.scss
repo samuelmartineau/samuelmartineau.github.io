@@ -1,3 +1,8 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
 /*
 	Spectral by HTML5 UP
 	html5up.net | @n33co
@@ -8,39 +13,39 @@
 
 	.spotlight {
 		display: block;
-	}
 
-		.spotlight .image {
+		.image {
 			display: inline-block;
 			vertical-align: top;
 		}
 
-		.spotlight .content {
-			padding: 4em 4em 2em 4em ;
+		.content {
+			@include padding(4em, 4em);
 			display: inline-block;
 		}
 
-		.spotlight:after {
+		&:after {
 			clear: both;
 			content: '';
 			display: block;
 		}
+	}
 
 /* Features */
 
 	.features {
 		display: block;
-	}
 
-		.features li {
+		li {
 			float: left;
 		}
 
-		.features:after {
+		&:after {
 			content: '';
 			display: block;
 			clear: both;
 		}
+	}
 
 /* Banner + Wrapper (style4) */
 
@@ -51,10 +56,8 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: relative;
-	}
 
-		#banner:before,
-		.wrapper.style4:before {
+		&:before {
 			background: #000000;
 			content: '';
 			height: 100%;
@@ -65,61 +68,67 @@
 			width: 100%;
 		}
 
-		#banner .inner,
-		.wrapper.style4 .inner {
+		.inner {
 			position: relative;
 			z-index: 1;
 		}
+	}
 
 /* Banner */
 
 	#banner {
-		padding: 14em 0 12em 0 ;
+		@include padding(14em, 0);
 		height: auto;
-	}
 
-		#banner:after {
+		&:after {
 			display: none;
 		}
+	}
 
 /* CTA */
 
-	#cta .inner header {
-		float: left;
-	}
+	#cta {
+		.inner {
+			header {
+				float: left;
+			}
 
-	#cta .inner .actions {
-		float: left;
-	}
+			.actions {
+				float: left;
+			}
 
-	#cta .inner:after {
-		clear: both;
-		content: '';
-		display: block;
+			&:after {
+				clear: both;
+				content: '';
+				display: block;
+			}
+		}
 	}
 
 /* Main */
 
-	#main > header {
-		background-image: url("../../images/banner.jpg");
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		position: relative;
-	}
-
-		#main > header:before {
-			background: #000000;
-			content: '';
-			height: 100%;
-			left: 0;
-			opacity: 0.5;
-			position: absolute;
-			top: 0;
-			width: 100%;
-		}
-
-		#main > header > * {
+	#main {
+		> header {
+			background-image: url("../../images/banner.jpg");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
 			position: relative;
-			z-index: 1;
+
+			&:before {
+				background: #000000;
+				content: '';
+				height: 100%;
+				left: 0;
+				opacity: 0.5;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+
+			> * {
+				position: relative;
+				z-index: 1;
+			}
 		}
+	}

@@ -1,0 +1,36 @@
+{
+  "name": "samuelmartineau.github.io",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf public/ && brunch build",
+    "watch": "rm -rf public/ && brunch watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelmartineau/samuelmartineau.github.io.git"
+  },
+  "keywords": [
+    "samuel",
+    "martineau",
+    "website"
+  ],
+  "author": "Samuel Martineau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuelmartineau/samuelmartineau.github.io/issues"
+  },
+  "homepage": "https://github.com/samuelmartineau/samuelmartineau.github.io#readme",
+  "devDependencies": {
+    "auto-reload-brunch": "^1.8.1",
+    "imageoptmizer-brunch": "0.0.6",
+    "javascript-brunch": "^1.8.0",
+    "node-sass": "^3.4.1",
+    "sass-brunch": "^1.9.1",
+    "uglify-js-brunch": "^1.7.8"
+  },
+  "dependencies": {
+    "jade-pages-brunch": "^1.7.9"
+  }
+}
