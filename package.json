@@ -25,7 +25,6 @@
   "devDependencies": {
     "auto-reload-brunch": "^1.8.1",
     "brunch": "^1.8.5",
-    "imageoptmizer-brunch": "0.0.6",
     "jade-pages-brunch": "^1.7.9",
     "javascript-brunch": "^1.8.0",
     "node-sass": "^3.4.1",
