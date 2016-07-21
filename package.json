@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rm -rf public/ && brunch build",
-    "dev": "rm -rf public/ && brunch watch"
+    "dev": "rm -rf public/ && brunch watch --server"
   },
   "repository": {
     "type": "git",
@@ -23,13 +23,13 @@
   },
   "homepage": "https://github.com/samuelmartineau/samuelmartineau.github.io#readme",
   "devDependencies": {
-    "auto-reload-brunch": "^1.8.1",
-    "brunch": "^1.8.5",
-    "jade-pages-brunch": "^1.7.9",
-    "javascript-brunch": "^1.8.0",
-    "node-sass": "^3.4.1",
-    "sass-brunch": "^1.9.1",
-    "uglify-js-brunch": "^1.7.8"
+    "auto-reload-brunch": "2.7.1",
+    "brunch": "2.8.2",
+    "jade-pages-brunch": "2.0.0",
+    "javascript-brunch": "2.0.0",
+    "node-sass": "3.8.0",
+    "sass-brunch": "2.6.3",
+    "uglify-js-brunch": "2.0.1"
   },
   "dependencies": {}
 }

@@ -1,6 +1,8 @@
 exports.config =
     sourceMaps: false
     optimize: true
+    npm:
+        enabled: false
     server:
       run: yes
     modules:
