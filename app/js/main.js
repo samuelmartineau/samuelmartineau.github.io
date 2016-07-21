@@ -45,6 +45,27 @@
 
 			}
 
+			new IsoGrid(document.querySelector('.isolayer--deco4'), {
+				perspective: 3000,
+				transform : 'translate3d(-50px,-150px,0) scale3d(0.8,0.8,1) rotateY(45deg) rotateZ(-10deg)',
+				stackItemsAnimation : {
+					properties : function(pos) {
+						return {
+							rotateX: (pos+1) * -15
+						};
+					},
+					options : function(pos, itemstotal) {
+						return {
+							type: dynamics.spring,
+							delay: (itemstotal-pos-1)*30
+						};
+					}
+				},
+				onGridLoaded : function() {
+					classie.add(document.body, 'grid-loaded');
+				}
+			});
+
 	});
 
 })(jQuery);

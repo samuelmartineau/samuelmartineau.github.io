@@ -1,5 +1,5 @@
 doctype html
-html
+html.no-js
   head
     title Samuel Martineau | Web Engineer
     meta(charset="UTF-8")
@@ -25,13 +25,11 @@ body.landing
 
     include ../partials/three.jade
     
+    include ../partials/portfolio.jade
+    
     include ../partials/cta.jade
     
     include ../partials/footer.jade
-
-
-  //if lte IE 9
-    script(src="js/ie/respond.min.js")
   
   script(src="js/app.min.js")
   script !function(e,n,t,o,a,c,s){e.GoogleAnalyticsObject=a,e[a]=e[a]||function(){(e[a].q=e[a].q||[]).push(arguments)},e[a].l=1*new Date,c=n.createElement(t),s=n.getElementsByTagName(t)[0],c.async=1,c.src=o,s.parentNode.insertBefore(c,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-65391889-1","auto"),ga("send","pageview "),setTimeout("ga('send', 'event', { eventCategory: '30 seconds on page', eventAction: 'Read' })",3e4);var runned=!1;$(window).scroll(function(){$(document).scrollTop()>=2e3&&0==runned&&(ga("send","event",{eventCategory:"Scrolled 2000px",eventAction:"Scroll"}),runned=!0)});

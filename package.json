@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rm -rf public/ && brunch build",
-    "dev": "rm -rf public/ && brunch watch --server"
+    "dev": "rm -rf public/ && DEV=true brunch watch --server"
   },
   "repository": {
     "type": "git",

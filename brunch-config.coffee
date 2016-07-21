@@ -1,6 +1,6 @@
 exports.config =
-    sourceMaps: false
-    optimize: true
+    sourceMaps: !!process.env.DEV
+    optimize: !process.env.DEV
     npm:
         enabled: false
     server:
@@ -15,12 +15,11 @@ exports.config =
         stylesheets:
             joinTo:
                 'style/app.min.css': /^app\/sass\/main.scss/
-                'style/ie.min.css': /^app\/sass\/ie9.scss/
-
         javascripts:
             joinTo:
                 'js/app.min.js'
             order:
+                before: ['app/js/modernizr.custom.js']
                 after: ['app/js/main.js']
     conventions:
         assets: /static[\\/]/
