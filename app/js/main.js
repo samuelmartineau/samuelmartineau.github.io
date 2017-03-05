@@ -6,6 +6,14 @@
 
 (function($) {
 
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then(function() {
+        // Success
+      }).catch(function() {
+        // Fail :(
+      });
+    }
+
 	skel
 	.breakpoints({
 		xlarge:	'(max-width: 1680px)',
