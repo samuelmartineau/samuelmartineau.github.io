@@ -39,7 +39,25 @@ html.no-js(lang="en")
           "name": "Samuel Martineau",
           "url": "https://samuelmartineau.com",
           "jobTitle": "Web Engineer",
-          "alumniOf": "Université de Technologie de Compiègne",
+          "description":"Front-End developer, Doctrine",
+          "address":{  
+              "@type":"PostalAddress",
+              "addresslocality":"Paris, France"
+          },
+          "alumniOf": [
+            {  
+              "@context":"http://schema.org",
+              "@type":"EducationalOrganization",
+              "legalName":"UTC (Université de Technologie de Compiègne)",
+              "award":"Ingénierie des Connaissances et des Supports d'Informations"
+            },
+            {  
+              "@context":"http://schema.org",
+              "@type":"EducationalOrganization",
+              "legalName":"Université de Poitiers",
+              "award":null
+            }
+          ],
           "gender": "male",
           "image": "https://samuelmartineau.com/images/me.jpg",
           "sameAs": [
