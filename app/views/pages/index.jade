@@ -32,5 +32,24 @@ html.no-js(lang="en")
 
       include ../partials/footer.jade
 
+    script(type="application/ld+json").
+      {
+          "@context": "http://schema.org",
+          "@type": "Person",
+          "name": "Samuel Martineau",
+          "url": "https://samuelmartineau.com",
+          "jobTitle": "Web Engineer",
+          "alumniOf": "Université de Technologie de Compiègne",
+          "gender": "male",
+          "image": "https://samuelmartineau.com/images/me.jpg",
+          "sameAs": [
+            "http://fr.linkedin.com/pub/samuel-martineau/81/298/786",
+            "https://twitter.com/marti_sami",
+            "https://github.com/samuelmartineau",
+            "http://stackoverflow.com/users/5198415/samuel-martineau",
+            "http://codepen.io/samuelmartineau",
+            "http://www.meetup.com/fr/members/182936637/"
+          ]
+      }
     script(src="js/app.min.js")
     script !function(e,n,t,o,a,c,s){e.GoogleAnalyticsObject=a,e[a]=e[a]||function(){(e[a].q=e[a].q||[]).push(arguments)},e[a].l=1*new Date,c=n.createElement(t),s=n.getElementsByTagName(t)[0],c.async=1,c.src=o,s.parentNode.insertBefore(c,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-65391889-1","auto"),ga("send","pageview "),setTimeout("ga('send', 'event', { eventCategory: '30 seconds on page', eventAction: 'Read' })",3e4);var runned=!1;$(window).scroll(function(){$(document).scrollTop()>=2e3&&0==runned&&(ga("send","event",{eventCategory:"Scrolled 2000px",eventAction:"Scroll"}),runned=!0)});
