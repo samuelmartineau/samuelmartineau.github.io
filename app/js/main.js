@@ -133,10 +133,12 @@
     }
 
     if (!("IntersectionObserver" in window)) {
-        Array.from(images).forEach(preloadImage);
+        [].forEach.call(images, preloadImage);
     } else {
         // It is supported, load the images
         observer = new IntersectionObserver(onIntersection, config);
-        images.forEach(observer.observe);
+        [].forEach.call(images, function(image) {
+            observer.observe(image);
+        });
     }
 })(jQuery);
