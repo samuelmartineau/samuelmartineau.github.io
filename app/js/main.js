@@ -122,7 +122,7 @@
     }
     function onIntersection(entries) {
         // Loop through the entries
-        entries.forEach(entry => {
+        entries.forEach(function(entry) {
             // Are we in viewport?
             if (entry.intersectionRatio > 0) {
                 // Stop watching and load the image
@@ -133,12 +133,10 @@
     }
 
     if (!("IntersectionObserver" in window)) {
-        Array.from(images).forEach(image => preloadImage(image));
+        Array.from(images).forEach(preloadImage);
     } else {
         // It is supported, load the images
         observer = new IntersectionObserver(onIntersection, config);
-        images.forEach(image => {
-            observer.observe(image);
-        });
+        images.forEach(observer.observe);
     }
 })(jQuery);
