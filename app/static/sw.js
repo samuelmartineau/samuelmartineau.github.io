@@ -9,7 +9,7 @@ var paths = [
     "/images/project/beerpongtournament.png",
     "/images/project/giveittome.png",
     "/images/project/gulp.png",
-    "/images/project/me.png",
+    "/images/project/website.png",
     "/images/project/merrycrosstmas.png",
     "/images/samuelmartineau.jpg"
 ];
