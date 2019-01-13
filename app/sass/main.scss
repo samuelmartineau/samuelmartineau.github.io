@@ -1705,6 +1705,15 @@ body.is-mobile {
   background-color: darken(_palette(bg), 8);
   text-align: center;
 
+  .footer-avatar {
+    $size: 8rem;
+    $border: 0.9rem;
+    border-radius: 50%;
+    border: calc(#{$border} / 2) solid white;
+    height: $size - $border;
+    text-align: center;
+  }
+
   .icons {
     font-size: 1.25em;
 
@@ -1761,7 +1770,7 @@ body.is-mobile {
   }
 
   @include breakpoint(small) {
-    @include padding(3em, 2em);
+    @include padding(2em, 2em);
   }
 }
 
