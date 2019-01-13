@@ -1287,6 +1287,7 @@ body.is-loading {
 
       a {
         color: inherit;
+        display: inline-block;
 
         &:hover {
           color: _palette(fg);
