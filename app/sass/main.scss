@@ -50,10 +50,7 @@ body {
   }
 }
 
-body,
-input,
-select,
-textarea {
+body {
   color: _palette(fg);
   font-family: _font(family);
   font-size: 15pt;
@@ -183,13 +180,6 @@ hr {
   }
 }
 
-blockquote {
-  border-left: solid 4px _palette(border);
-  font-style: italic;
-  margin: 0 0 _size(element-margin) 0;
-  padding: 0.5em 0 0.5em 2em;
-}
-
 code {
   background: _palette(border-bg);
   border-radius: 3px;
@@ -306,31 +296,6 @@ label {
   margin: 0 0 (_size(element-margin) * 0.5) 0;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-select,
-textarea {
-  @include vendor("appearance", "none");
-  background: _palette(border-bg);
-  border-radius: 3px;
-  border: none;
-  color: inherit;
-  display: block;
-  outline: 0;
-  padding: 0 1em;
-  text-decoration: none;
-  width: 100%;
-
-  &:invalid {
-    box-shadow: none;
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 2px _palette(accent1, bg);
-  }
-}
-
 .select-wrapper {
   @include icon;
   display: block;
@@ -352,130 +317,6 @@ textarea {
 
   select::-ms-expand {
     display: none;
-  }
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-select {
-  height: _size(element-height);
-}
-
-textarea {
-  padding: 0.75em 1em;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  @include vendor("appearance", "none");
-  display: block;
-  float: left;
-  margin-right: -2em;
-  opacity: 0;
-  width: 1em;
-  z-index: -1;
-
-  & + label {
-    @include icon;
-    color: _palette(fg);
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1em;
-    font-weight: _font(weight);
-    padding-left: (_size(element-height) * 0.6) + 0.75em;
-    padding-right: 0.75em;
-    position: relative;
-
-    &:before {
-      background: _palette(border-bg);
-      border-radius: 3px;
-      content: "";
-      display: inline-block;
-      height: (_size(element-height) * 0.6);
-      left: 0;
-      line-height: (_size(element-height) * 0.575);
-      position: absolute;
-      text-align: center;
-      top: 0;
-      width: (_size(element-height) * 0.6);
-    }
-  }
-
-  &:checked + label {
-    &:before {
-      background: _palette(bg);
-      color: _palette(fg-bold);
-      content: "\f00c";
-    }
-  }
-
-  &:focus + label {
-    &:before {
-      box-shadow: 0 0 0 2px _palette(accent1, bg);
-    }
-  }
-}
-
-input[type="checkbox"] {
-  & + label {
-    &:before {
-      border-radius: 3px;
-    }
-  }
-}
-
-input[type="radio"] {
-  & + label {
-    &:before {
-      border-radius: 100%;
-    }
-  }
-}
-
-::-webkit-input-placeholder {
-  color: _palette(fg-light) !important;
-  opacity: 1;
-}
-
-:-moz-placeholder {
-  color: _palette(fg-light) !important;
-  opacity: 1;
-}
-
-::-moz-placeholder {
-  color: _palette(fg-light) !important;
-  opacity: 1;
-}
-
-:-ms-input-placeholder {
-  color: _palette(fg-light) !important;
-  opacity: 1;
-}
-
-.formerize-placeholder {
-  color: _palette(fg-light) !important;
-  opacity: 1;
-}
-
-/* Box */
-
-.box {
-  border-radius: 3px;
-  border: solid 2px _palette(border);
-  margin-bottom: _size(element-margin);
-  padding: 1.5em;
-
-  > :last-child,
-  > :last-child > :last-child,
-  > :last-child > :last-child > :last-child {
-    margin-bottom: 0;
-  }
-
-  &.alt {
-    border: 0;
-    border-radius: 0;
-    padding: 0;
   }
 }
 
@@ -1079,18 +920,6 @@ button,
     color: _palette($p, fg-bold);
   }
 
-  hr {
-    border-color: _palette($p, border);
-  }
-
-  blockquote {
-    border-color: _palette($p, border);
-  }
-
-  code {
-    background: _palette($p, border-bg);
-  }
-
   // Section/Article
 
   header {
@@ -1113,66 +942,7 @@ button,
     }
   }
 
-  // Form
-
-  label {
-    color: _palette($p, fg-bold);
-  }
-
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  select,
-  textarea {
-    background: _palette($p, border-bg);
-  }
-
-  .select-wrapper {
-    &:before {
-      color: _palette($p, border);
-    }
-  }
-
-  input[type="checkbox"],
-  input[type="radio"] {
-    & + label {
-      color: _palette($p, fg);
-
-      &:before {
-        background: _palette($p, border-bg);
-      }
-    }
-
-    &:checked + label {
-      &:before {
-        background: _palette($p, fg-bold);
-        color: _palette($p, bg);
-      }
-    }
-  }
-
-  ::-webkit-input-placeholder {
-    color: _palette($p, fg-light) !important;
-  }
-
-  :-moz-placeholder {
-    color: _palette($p, fg-light) !important;
-  }
-
-  ::-moz-placeholder {
-    color: _palette($p, fg-light) !important;
-  }
-
-  :-ms-input-placeholder {
-    color: _palette($p, fg-light) !important;
-  }
-
-  .formerize-placeholder {
-    color: _palette($p, fg-light) !important;
-  }
-
   // Icon
-
   .icon {
     &.major {
       border-color: _palette($p, border);
@@ -1180,7 +950,6 @@ button,
   }
 
   // List
-
   ul {
     &.alt {
       li {
@@ -1189,63 +958,7 @@ button,
     }
   }
 
-  // Table
-
-  table {
-    tbody {
-      tr {
-        border-color: _palette($p, border);
-
-        &:nth-child(2n + 1) {
-          background-color: _palette($p, border-bg);
-        }
-      }
-    }
-
-    th {
-      color: _palette($p, fg-bold);
-    }
-
-    thead {
-      border-color: _palette($p, border);
-    }
-
-    tfoot {
-      border-color: _palette($p, border);
-    }
-
-    &.alt {
-      tbody {
-        tr {
-          td {
-            border-color: _palette($p, border);
-          }
-        }
-      }
-    }
-  }
-
-  // Button
-
-  input[type="submit"],
-  input[type="reset"],
-  input[type="button"],
-  button,
-  .button {
-    box-shadow: inset 0 0 0 2px _palette($p, border);
-    color: _palette($p, fg-bold);
-
-    &:hover {
-      background-color: _palette($p, border-bg);
-    }
-
-    &:active {
-      background-color: _palette($p, border2-bg);
-    }
-  }
-
   // Features
-
   .features {
     li {
       @include breakpoint(small) {
@@ -1291,10 +1004,6 @@ button,
     background-color: transparent;
   }
 
-  &.style5 {
-    @include wrapper(accent7);
-  }
-
   @include breakpoint(medium) {
     @include padding(4em, 3em);
   }
@@ -1325,114 +1034,6 @@ button,
   }
 }
 
-/* Header */
-
-#header {
-  @include vendor(
-    "transition",
-    "background-color #{_duration(transitions)} ease"
-  );
-  background: _palette(bg);
-  height: 3em;
-  left: 0;
-  line-height: 3em;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: _misc(z-index-base);
-
-  h1 {
-    @include vendor("transition", "opacity #{_duration(transitions)} ease");
-    height: inherit;
-    left: 1.25em;
-    line-height: inherit;
-    position: absolute;
-    top: 0;
-
-    a {
-      border: 0;
-      display: block;
-      height: inherit;
-      line-height: inherit;
-
-      @include breakpoint(small) {
-        font-size: 0.8em;
-      }
-    }
-  }
-
-  nav {
-    height: inherit;
-    line-height: inherit;
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    > ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      white-space: nowrap;
-
-      > li {
-        display: inline-block;
-        padding: 0;
-
-        > a {
-          border: 0;
-          color: _palette(fg-bold);
-          display: block;
-          font-size: 0.8em;
-          letter-spacing: _size(letter-spacing-alt);
-          padding: 0 1.5em;
-          text-transform: uppercase;
-
-          &.menuToggle {
-            outline: 0;
-            position: relative;
-
-            &:after {
-              background-image: url("../images/bars.svg");
-              background-position: right center;
-              background-repeat: no-repeat;
-              content: "";
-              display: inline-block;
-              height: 3.75em;
-              vertical-align: top;
-              width: 2em;
-            }
-
-            @include breakpoint(small) {
-              padding: 0 1.5em;
-
-              span {
-                display: none;
-              }
-            }
-          }
-
-          @include breakpoint(small) {
-            padding: 0 0 0 1.5em;
-          }
-        }
-
-        &:first-child {
-          margin-left: 0;
-        }
-      }
-    }
-  }
-
-  &.alt {
-    background: transparent;
-
-    h1 {
-      @include vendor("pointer-events", "none");
-      opacity: 0;
-    }
-  }
-}
-
 /* Banner */
 
 #banner {
@@ -1446,8 +1047,7 @@ button,
   position: relative;
   text-align: center;
 
-  h1,
-  h2 {
+  h1 {
     @include vendor("transform", "scale(1)");
     @include vendor("transition", ("transform 0.5s ease", "opacity 0.5s ease"));
     display: inline-block;
@@ -1633,71 +1233,6 @@ body.is-loading {
   }
 }
 
-/* Main */
-
-#main {
-  > header {
-    @include padding(12em, 0);
-    @include vendor(
-      "background-image",
-      (
-        "linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))",
-        'url("../../images/banner.jpg")'
-      )
-    );
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-
-    h2 {
-      font-size: 1.75em;
-      margin: 0 0 (_size(element-margin) * 0.25) 0;
-    }
-
-    p {
-      color: inherit;
-      letter-spacing: _size(letter-spacing-alt);
-      text-transform: uppercase;
-      top: 0;
-
-      a {
-        color: inherit;
-      }
-    }
-
-    @include breakpoint(xlarge) {
-      @include padding(10em, 0);
-    }
-
-    @include breakpoint(large) {
-      @include padding(8em, 3em);
-    }
-
-    @include breakpoint(medium) {
-      @include padding(10em, 3em);
-    }
-
-    @include breakpoint(small) {
-      @include padding(5em, 3em);
-
-      h2 {
-        font-size: 1.25em;
-        margin: 0 0 (_size(element-margin) * 0.5) 0;
-      }
-    }
-  }
-}
-
-body.is-mobile {
-  #main {
-    > header {
-      background-attachment: scroll;
-    }
-  }
-}
-
 /* Footer */
 
 #footer {
@@ -1712,6 +1247,7 @@ body.is-mobile {
     border: calc(#{$border} / 2) solid white;
     height: $size - $border;
     text-align: center;
+    margin-bottom: 1em;
   }
 
   .icons {
