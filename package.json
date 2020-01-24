@@ -24,10 +24,10 @@
   "homepage": "https://github.com/samuelmartineau/samuelmartineau.github.io#readme",
   "devDependencies": {
     "auto-reload-brunch": "2.7.1",
-    "brunch": "2.10.17",
+    "brunch": "3.0.0",
     "jade-pages-brunch": "2.0.0",
     "javascript-brunch": "2.10.0",
-    "node-sass": "4.11.0",
+    "node-sass": "4.13.1",
     "sass-brunch": "2.10.8",
     "uglify-js-brunch": "2.10.0"
   },
