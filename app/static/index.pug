@@ -15,9 +15,9 @@ html.no-js(lang="en")
     link(href="https://samuelmartineau.com/" rel="canonical")
     link(rel="preconnect" href="//maxcdn.bootstrapcdn.com" crossorigin)
     link(rel="preconnect" href="//fonts.googleapis.com" crossorigin)
-    link(rel="preload" as="style" href="//fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap" crossorigin)
+    link(rel="preload" as="style" href!="//fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap" crossorigin)
     link(rel="preload" as="style" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" crossorigin)
-    link(href="//fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap" rel="stylesheet" crossorigin)
+    link(href!="//fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap" rel="stylesheet" crossorigin)
     link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"  crossorigin)
     link(rel="stylesheet" href="style/app.min.css")
 
@@ -25,19 +25,19 @@ html.no-js(lang="en")
   
     #page-wrapper
 
-      include ../partials/banner.jade
+      include ../partials/banner.pug
 
-      include ../partials/one.jade
+      include ../partials/one.pug
 
-      include ../partials/two.jade
+      include ../partials/two.pug
 
-      include ../partials/three.jade
+      include ../partials/three.pug
 
-      include ../partials/portfolio.jade
+      include ../partials/portfolio.pug
 
-      include ../partials/cta.jade
+      include ../partials/cta.pug
 
-      include ../partials/footer.jade
+      include ../partials/footer.pug
 
     script(type="application/ld+json").
       {

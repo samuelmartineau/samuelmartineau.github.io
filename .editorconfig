@@ -12,7 +12,7 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.{jade,yml,yaml,scss,sass}]
+[*.{pug,yml,yaml,scss,sass}]
 indent_size = 2
 
 [{package.json, bower.json}]
