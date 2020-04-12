@@ -1,9 +1,9 @@
 - var projects = []
-- projects.push({link: 'https://samuelmartineau.github.io/beerpongtournament', image: 'beerpongtournament.png'})
-- projects.push({link: 'https://merrycrosstmas.herokuapp.com', image: 'merrycrosstmas.png'})
-- projects.push({link: 'http://samuelmartineau.com', image: 'website.png'})
-- projects.push({link: 'https://github.com/samuelmartineau/gulp-pdf-thumbnail', image: 'gulp.png'})
-- projects.push({link: 'https://github.com/samuelmartineau/give-it-to-me', image: 'giveittome.png'})
+- projects.push({link: 'https://samuelmartineau.github.io/beerpongtournament', image: 'beerpongtournament.png', alt: 'Beer Pong tournament manager'})
+- projects.push({link: 'https://merrycrosstmas.herokuapp.com', image: 'merrycrosstmas.png', alt: 'secret santa manager'})
+- projects.push({link: 'http://samuelmartineau.com', image: 'website.png', 'Samuel Martineau personal website'})
+- projects.push({link: 'https://github.com/samuelmartineau/gulp-pdf-thumbnail', image: 'gulp.png', 'Gulp package for PDF generation'})
+- projects.push({link: 'https://github.com/samuelmartineau/give-it-to-me', image: 'giveittome.png', 'Personal Cellar manager'})
 
 .portfolio
   h2.section__heading Doing <em>is</em> Primary
@@ -16,4 +16,4 @@
             .layer
             .layer
             .layer
-            img.grid__img.layer(data-src="images/projects/#{project.image}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="01" data-js-lazy-image)
+            img.grid__img.layer(data-src="images/projects/#{project.image}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="#{project.image}" data-js-lazy-image)
