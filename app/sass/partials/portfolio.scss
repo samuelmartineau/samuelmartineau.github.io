@@ -1,0 +1,81 @@
+.portfolio {
+    text-align: right;
+      overflow: hidden;
+      position: relative;
+      padding: 7vmax;
+    background: linear-gradient(90deg, #58A8FB, #465683);
+  }
+  
+  .section__heading {
+      pointer-events: none;
+      padding: 0;
+      font-size: 4.5em;
+      line-height: 1;
+      margin: 0;
+      color: #fff;
+      position: relative;
+      z-index: 1000;
+  }
+  
+  .section__heading em {
+      font-family: sans-serif;
+      font-style: normal;
+      text-transform: uppercase;
+      font-size: 0.3em;
+      border-top: 3px solid #fff;
+      border-bottom: 3px solid #fff;
+      padding: 0.15em 0;
+      vertical-align: middle;
+      display: inline-block;
+      letter-spacing: 0.05em;
+  }
+  
+  .section__subtitle {
+      pointer-events: none;
+      font-size: 1.25em;
+      max-width: 500px;
+      position: relative;
+      z-index: 1000;
+    margin: 1em 0 1em auto;
+    color: #141715;
+  }
+  
+  
+  @media screen and (max-width: 50em) {
+      .section__heading {
+          font-size: 2.5em;
+      }
+    .section__subtitle {
+      display: none;
+    }
+  }
+
+  .grid {
+    max-width: 1200px;
+    margin: 1em auto;
+    display: grid;
+    grid-gap: 1rem;
+
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  
+    @media (min-width: 900px) {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+
+    &__img {
+      max-width: 100%;
+    }
+
+    &__item {
+      padding: 0px;
+    }
+
+    &__link {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+

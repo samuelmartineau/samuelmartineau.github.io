@@ -2,7 +2,6 @@
 @import "libs/functions";
 @import "libs/mixins";
 @import "libs/skel";
-@import "isometricGrid/main";
 
 /*
 	Spectral by HTML5 UP
@@ -794,11 +793,18 @@ ul {
     width: 16em;
     z-index: 1;
 
+    &:hover {
+      &:after {
+        transform: translateY(8px);
+      }
+    }
+
     &:after {
       background-image: url("../images/arrow.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+      transition: all .15s ease-out;
       bottom: 4em;
       content: "";
       display: block;
@@ -847,22 +853,10 @@ ul {
 body.is-loading {
   #banner {
     h1 {
-      @include vendor("transform", "scale(0.95)");
-      opacity: 0;
-
       &:before,
       &:after {
         width: 0;
       }
-    }
-
-    .more {
-      @include vendor("transform", "translateY(8.5em)");
-      opacity: 0;
-    }
-
-    &:after {
-      opacity: 1;
     }
   }
 }
@@ -996,7 +990,7 @@ body.is-loading {
 
 /* Landing */
 
-body.landing {
+body {
   #page-wrapper {
     @include vendor(
       "background-image",
@@ -1042,3 +1036,5 @@ body.is-mobile {
     }
   }
 }
+
+@import "partials/portfolio";

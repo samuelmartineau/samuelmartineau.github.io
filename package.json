@@ -4,8 +4,8 @@
   "description": "Personal Website",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf public/ && brunch build",
-    "dev": "rm -rf public/ && DEV=true brunch watch --server"
+    "build": "rm -rf public/ && gulp",
+    "dev": "rm -rf public/ && gulp dev"
   },
   "repository": {
     "type": "git",
@@ -23,13 +23,15 @@
   },
   "homepage": "https://github.com/samuelmartineau/samuelmartineau.github.io#readme",
   "devDependencies": {
-    "auto-reload-brunch": "2.7.1",
-    "brunch": "3.0.0",
-    "javascript-brunch": "2.10.0",
-    "node-sass": "4.13.1",
-    "pugjs-brunch": "^2.11.3",
-    "sass-brunch": "2.10.8",
-    "uglify-js-brunch": "2.10.0"
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-webserver": "^0.9.1",
+    "node-sass": "4.13.1"
   },
   "dependencies": {}
 }
