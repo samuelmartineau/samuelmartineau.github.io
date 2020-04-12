@@ -5,6 +5,7 @@ const sass = require('gulp-sass');
 const minifyCSS = require('gulp-csso');
 const concat = require('gulp-concat');
 const rename = require("gulp-rename");
+const uglify = require('gulp-uglify');
 
 const config = {
     root: 'app',
@@ -34,6 +35,7 @@ function css() {
 function js() {
     return src(config.jsFiles, { sourcemaps: true })
         .pipe(concat('app.min.js'))
+        .pipe(uglify())
         .pipe(dest('public/js', { sourcemaps: true }))
         .pipe(server.stream())
 }
