@@ -21,7 +21,6 @@
 
 @include skel-layout(
   (
-    reset: "full",
     boxModel: "border",
     grid: (
       gutters: 1.5em
@@ -31,6 +30,7 @@
 
 /* Basic */
 body {
+  margin: 0;
   background: _palette(bg);
 
   &.is-loading {
@@ -240,13 +240,8 @@ header {
 
 /* List */
 ul {
-  list-style: disc;
-  margin: 0 0 _size(element-margin) 0;
-  padding-left: 1em;
-
-  li {
-    padding-left: 0.5em;
-  }
+  list-style-type: none;
+  padding: 0;
 
   &.icons {
     cursor: default;
@@ -788,7 +783,7 @@ ul {
     }
 
     &:after {
-      background-image: url("../images/arrow.svg");
+      background-image: url("/images/arrow.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -980,7 +975,7 @@ body.is-loading {
 
 body {
   #page-wrapper {
-    background-image: linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../../images/banner.jpg);
+    background-image: linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,.5)),url(/images/banner.jpg);
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;

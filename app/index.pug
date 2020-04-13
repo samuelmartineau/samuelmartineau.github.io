@@ -1,21 +1,21 @@
 doctype html
-html.no-js(lang="en")
+html.no-js(lang=`${intl.language}`)
   head
-    title Samuel Martineau | Web Engineer
+    title= intl.title
     meta(charset="UTF-8")
     meta(name="author" content="Samuel Martineau")
-    meta(name="description" content="Samuel Martineau website, a french software engineer and web developer expert. I am currently working for Doctrine in Paris  and I love the Web!")
+    meta(name="description" content=`${intl.description}`)
     meta(name="keywords" content="frontend, web, developer")
     meta(property="og:type" content="website")
-    meta(property="og:title" content="Website of Samuel Martineau | French Developer")
-    meta(property="og:description" content="Samuel Martineau website, a french software engineer and web developer expert. I am currently working for Doctrine in Paris  and I love the Web!")
-    meta(property="og:url" content="https://samuelmartineau.com/")
-    meta(name="language" content="english")
+    meta(property="og:title" content=`${intl.title}`)
+    meta(property="og:description" content=`${intl.description}`)
+    meta(property="og:url" content=`${intl.url}`)
+    meta(name="language" content=`${intl.readableLanguage}`)
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="theme-color" content="#2e3842")
 
-    link(rel="icon" href="samuel_martineau.ico")
-    link(rel="manifest" href="manifest.json")
+    link(rel="icon" href="/samuel_martineau.ico")
+    link(rel="manifest" href="/manifest.json")
     link(href="https://samuelmartineau.com/" rel="canonical")
     link(rel="preconnect" href="//maxcdn.bootstrapcdn.com" crossorigin)
     link(rel="preconnect" href="//fonts.googleapis.com" crossorigin)
@@ -23,7 +23,11 @@ html.no-js(lang="en")
     link(rel="preload" as="style" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" crossorigin)
     link(href!="//fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap" rel="stylesheet" crossorigin)
     link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"  crossorigin)
-    link(rel="stylesheet" href="style/app.min.css")
+    link(rel="stylesheet" href="/style/app.min.css")
+    link(rel="alternate" hreflang="en" href="https://samuelmartineau.com")
+    link(rel="alternate" hreflang="fr-fr" href="https://samuelmartineau.com/fr")
+    link(rel="alternate" hreflang="x-default" href="https://samuelmartineau.com")
+
 
   body.landing
   
@@ -49,8 +53,8 @@ html.no-js(lang="en")
           "@type": "Person",
           "name": "Samuel Martineau",
           "url": "https://samuelmartineau.com",
-          "jobTitle": "Web Engineer",
-          "description":"Front-End developer, Doctrine",
+          "jobTitle": "Software Engineer",
+          "description": "#{intl.description}",
           "address":{  
               "@type":"PostalAddress",
               "addresslocality":"Paris, France"
@@ -80,5 +84,5 @@ html.no-js(lang="en")
             "http://www.meetup.com/fr/members/182936637/"
           ]
       }
-    script(src="js/app.min.js")
+    script(src="/js/app.min.js")
     script !function(e,n,t,o,a,c,s){e.GoogleAnalyticsObject=a,e[a]=e[a]||function(){(e[a].q=e[a].q||[]).push(arguments)},e[a].l=1*new Date,c=n.createElement(t),s=n.getElementsByTagName(t)[0],c.async=1,c.src=o,s.parentNode.insertBefore(c,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-65391889-1","auto"),ga("send","pageview ");

@@ -1,10 +1,5 @@
 section#banner
   .inner
     h1 Samuel Martineau
-    p 
-      | Passionate Web Engineer, 
-      br
-      | I like (m|bre)aking things 
-      br
-      | to turn complexity into simplicity.
-  a.more.scrolly(href="#one" onclick="ga('send', 'event', { eventCategory: 'Learn More', eventAction: 'Click' })") Learn More
+    p!= intl.banner.title 
+  a#more.more(href="#one")= intl.banner.action
