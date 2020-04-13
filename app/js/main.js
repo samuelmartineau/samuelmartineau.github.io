@@ -1,6 +1,6 @@
-(function () {
+window.addEventListener('load', () => {
     setTimeout("ga('send', 'event', { eventCategory: '30 seconds on page', eventAction: 'Read' })", 3e4)
-    var runned = false;
+    let runned = false;
 
     window.addEventListener('scroll', function (e) {
         if (document.body.scrollTop >= 2e3 && true == runned) {
@@ -20,11 +20,7 @@
             });
     }
 
-    var $window = document.querySelector('window');
-    var $body = document.querySelector("body");
-    var $wrapper = document.querySelector("#page-wrapper");
-    var $banner = document.querySelector("#banner");
-    var $header = document.querySelector("#header");
+    const $body = document.querySelector("body");
 
     // Disable animations/transitions until the page has loaded.
     $body.classList.add("is-loading");
@@ -34,12 +30,13 @@
         $body.classList.remove("is-loading");
     }, 100);
 
-    var images = document.querySelectorAll("img[data-js-lazy-image]");
-    var config = {
+    const images = document.querySelectorAll("img[data-js-lazy-image]");
+    const config = {
         // If the image gets within 50px in the Y axis, start the download.
         rootMargin: "50px 0px",
         threshold: 0.01
     };
+    let observer;
     function preloadImage(image) {
         image.src = image.dataset.src;
     }
@@ -64,4 +61,4 @@
             observer.observe(image);
         });
     }
-})();
+})

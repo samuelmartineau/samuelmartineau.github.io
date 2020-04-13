@@ -37,8 +37,8 @@ body {
     *,
     *:before,
     *:after {
-      @include vendor("animation", "none !important");
-      @include vendor("transition", "none !important");
+      animation: none !important;
+      transition: none !important;
     }
   }
 }
@@ -66,13 +66,8 @@ body {
 }
 
 a {
-  @include vendor(
-    "transition",
-    (
-      "color #{_duration(transitions)} ease",
-      "border-bottom-color #{_duration(transitions)} ease"
-    )
-  );
+      transition: color #{_duration(transitions)} ease;
+      transition: border-bottom-color #{_duration(transitions)} ease;
   border-bottom: dotted 1px;
   color: inherit;
   text-decoration: none;
@@ -195,7 +190,7 @@ header {
   }
 
   &.major {
-    @include vendor("transform", "rotate(-45deg)");
+    transform: rotate(-45deg);
     border-radius: 3px;
     border: solid 2px _palette(border);
     display: inline-block;
@@ -206,7 +201,7 @@ header {
     width: calc(3em + 2px);
 
     &:before {
-      @include vendor("transform", "rotate(45deg)");
+      transform: rotate(45deg);
       display: inline-block;
       font-size: 1.5em;
     }
@@ -350,14 +345,10 @@ ul {
 /* Button */
 
 .button {
-  @include vendor("appearance", "none");
-  @include vendor(
-    "transition",
-    (
-      "background-color #{_duration(transitions)} ease-in-out",
-      "color #{_duration(transitions)} ease-in-out"
-    )
-  );
+  appearance: none;
+      transition: background-color #{_duration(transitions)} ease-in-out;
+      transition: color #{_duration(transitions)} ease-in-out;
+
   background-color: transparent;
   border-radius: 3px;
   border: 0;
@@ -422,7 +413,7 @@ ul {
 
   &.disabled,
   &:disabled {
-    @include vendor("pointer-events", "none");
+    pointer-events: none;
     opacity: 0.25;
   }
 
@@ -435,9 +426,9 @@ ul {
 /* Features */
 
 .features {
-  @include vendor("display", "flex");
-  @include vendor("flex-wrap", "wrap");
-  @include vendor("justify-content", "center");
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
   padding: 0;
   width: 100%;
@@ -510,11 +501,11 @@ ul {
 /* Spotlight */
 
 .spotlight {
-  @include vendor("align-items", "center");
-  @include vendor("display", "flex");
+  align-items: center;
+  display: flex;
 
   .image {
-    @include vendor("order", "1");
+    order: 1;
     border-radius: 0;
     width: 40%;
 
@@ -526,13 +517,13 @@ ul {
 
   .content {
     @include padding(2em, 4em);
-    @include vendor("order", "2");
+    order: 2;
     max-width: 48em;
     width: 60%;
   }
 
   &:nth-child(2n) {
-    @include vendor("flex-direction", "row-reverse");
+    flex-direction: row-reverse;
   }
 
   @for $i from 1 through _misc(max-spotlights) {
@@ -696,7 +687,7 @@ ul {
 /* Page Wrapper + Menu */
 
 #page-wrapper {
-  @include vendor("transition", "opacity #{_duration(menu)} ease");
+  transition: opacity #{_duration(menu)} ease;
   opacity: 1;
   padding-top: 3em;
 
@@ -717,9 +708,9 @@ ul {
 /* Banner */
 
 #banner {
-  @include vendor("display", "flex");
-  @include vendor("flex-direction", "column");
-  @include vendor("justify-content", "center");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   cursor: default;
   height: 100vh;
   min-height: 35em;
@@ -728,8 +719,8 @@ ul {
   text-align: center;
 
   h1 {
-    @include vendor("transform", "scale(1)");
-    @include vendor("transition", ("transform 0.5s ease", "opacity 0.5s ease"));
+    transform: scale(1);
+    transition: transform 0.5s ease opacity 0.5s ease;
     display: inline-block;
     font-size: 1.75em;
     opacity: 1;
@@ -739,8 +730,8 @@ ul {
 
     &:before,
     &:after {
-      @include vendor("transition", "width 0.85s ease");
-      @include vendor("transition-delay", "0.25s");
+      transition: width 0.85s ease;
+      transition-delay: 0.25s;
       background: _palette(fg-bold);
       content: "";
       display: block;
@@ -770,12 +761,9 @@ ul {
   }
 
   .more {
-    @include vendor(
-      "transition",
-      ("transform 0.75s ease", "opacity 0.75s ease")
-    );
-    @include vendor("transition-delay", "3.5s");
-    @include vendor("transform", "translateY(0)");
+          transition: transform 0.75s ease, opacity 0.75s ease;
+    transition-delay: 3.5s;
+    transform: translateY(0);
     border: none;
     bottom: 0;
     color: inherit;
@@ -817,9 +805,9 @@ ul {
   }
 
   &:after {
-    @include vendor("pointer-events", "none");
-    @include vendor("transition", "opacity #{_duration(fadein)} ease-in-out");
-    @include vendor("transition-delay", "1.25s");
+    pointer-events: none;
+    transition: opacity #{_duration(fadein)} ease-in-out;
+    transition-delay: 1.25s;
     content: "";
     background: _palette(bg);
     display: block;
@@ -865,11 +853,11 @@ body.is-loading {
 
 #cta {
   .inner {
-    @include vendor("display", "flex");
+    display: flex;
     max-width: 45em;
 
     header {
-      @include vendor("order", "1");
+      order: 1;
       padding-right: 3em;
       width: 70%;
 
@@ -879,7 +867,7 @@ body.is-loading {
     }
 
     .actions {
-      @include vendor("order", "2");
+      order: 2;
       width: 30%;
     }
 
@@ -992,13 +980,7 @@ body.is-loading {
 
 body {
   #page-wrapper {
-    @include vendor(
-      "background-image",
-      (
-        "linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))",
-        'url("../../images/banner.jpg")'
-      )
-    );
+    background-image: linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../../images/banner.jpg);
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1008,32 +990,6 @@ body {
 
   #footer {
     background-color: darken(transparentize(_palette(bg), 0.1), 8);
-  }
-}
-
-body.is-mobile {
-  &.landing {
-    #page-wrapper {
-      background: none;
-    }
-
-    #banner,
-    .wrapper.style4 {
-      @include vendor(
-        "background-image",
-        (
-          "linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))",
-          'url("../../images/banner.jpg")'
-        )
-      );
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    #footer {
-      background-color: darken(_palette(bg), 8);
-    }
   }
 }
 
