@@ -1,4 +1,4 @@
-var cacheStorageKey = "samuel-martineau-v2";
+var cacheStorageKey = "samuel-martineau-v3";
 var cacheList = [
     "/",
     "/index.html",
@@ -9,11 +9,11 @@ var cacheList = [
     "/images/law.jpg",
     "/images/marathon.jpg",
     "/images/arrow.svg",
-    "/images/projects/beerpongtournament.png",
-    "/images/projects/giveittome.png",
-    "/images/projects/gulp.png",
-    "/images/projects/website.png",
-    "/images/projects/merrycrosstmas.png",
+    "/images/projects/beerpongtournament.jpg",
+    "/images/projects/giveittome.jpg",
+    "/images/projects/gulp.jpg",
+    "/images/projects/website.jpg",
+    "/images/projects/merrycrosstmas.jpg",
     "/images/samuelmartineau.jpg"
 ];
 
