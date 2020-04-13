@@ -1,5 +1,5 @@
 #footer
-  img.footer-avatar(data-src="images/samuelmartineau.jpg" alt="Samuel Martineau avatar" title="Samuel Martineau avatar" data-js-lazy-image src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
+  img.footer-avatar(data-src="/images/samuelmartineau.jpg" alt="Samuel Martineau avatar" title="Samuel Martineau avatar" data-js-lazy-image src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
 
   ul.icons
     li
@@ -29,3 +29,7 @@
     li
       | Design:
       a(target="_blank" rel="nofollow noopener" href="http://html5up.net") HTML5 UP
+  
+  .version
+    a(href=`${intl.footer.otherVersion.link}`)= intl.footer.otherVersion.label 
+

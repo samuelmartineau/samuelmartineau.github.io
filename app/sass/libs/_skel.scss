@@ -249,15 +249,6 @@ $breakpoints: () !global;
     $configPerBreakpoint: $z;
   }
 
-  // Reset.
-  $x: map-get($config, "reset");
-
-  @if $x {
-    /* Reset */
-
-    @include reset($x);
-  }
-
   // Box model.
   $x: map-get($config, "boxModel");
 
@@ -360,80 +351,4 @@ $breakpoints: () !global;
     }
   }
 }
-
-/// Resets browser styles.
-/// @param {string} $mode Mode (default is 'normalize').
-@mixin reset($mode: "normalize") {
-  @if $mode == "full" {
-    // meyerweb.com/eric/tools/css/reset v2.0 | 20110126 | License: none (public domain)
-    html,
-    body,
-    div,
-    span,
-    applet,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    a,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    s,
-    samp,
-    small,
-    strike,
-    strong,
-    sub,
-    sup,
-    tt,
-    var,
-    b,
-    u,
-    i,
-    center,
-    ol,
-    ul,
-    li,
-    fieldset,
-    article,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    output,
-    section,
-    summary,
-    footer,
-    header,
-    menu,
-    nav,
-    section {
-      display: block;
-    }
-    body {
-      line-height: 1;
-      margin: 0;
-    }
-    ol,
-    ul {
-      list-style: none;
-    }
-    body {
-      -webkit-text-size-adjust: none;
-      margin: 0;
-    }
-  }
-}
-
 

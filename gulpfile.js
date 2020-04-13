@@ -1,3 +1,4 @@
+const fs = require("fs");
 const { src, dest, parallel, series, watch } = require('gulp');
 const server = require('browser-sync').create();
 const pug = require('gulp-pug');
@@ -20,12 +21,24 @@ const config = {
 
 }
 
-function html() {
+function english() {
+    const intl = JSON.parse(fs.readFileSync('./app/intl.json', 'utf8'))
+
     return src(config.pugFiles)
-        .pipe(pug())
+        .pipe(pug({ locals: { intl: intl.en } }))
         .pipe(dest('public/'))
         .pipe(server.stream())
 }
+
+
+function french() {
+    const intl = JSON.parse(fs.readFileSync('./app/intl.json', 'utf8'))
+    return src(config.pugFiles)
+        .pipe(pug({ locals: { intl: intl.fr } }))
+        .pipe(dest('public/fr/'))
+        .pipe(server.stream())
+}
+
 
 function css() {
     return src(config.sassFiles)
@@ -73,13 +86,14 @@ function reload(done) {
 function watchFiles(done) {
     watch('app/**/*.scss', series(css, reload));
     watch('app/**/*.pug', series(html, reload));
+    watch('app/*.json', series(html, reload));
     watch('app/**/*.js', series(js, reload));
     watch('app/static/**/*', series(static, reload));
     done()
 };
 
 
-
+const html = parallel(english, french);
 
 exports.js = js;
 exports.css = css;
