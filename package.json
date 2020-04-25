@@ -34,11 +34,11 @@
     "gulp-postcss": "^8.0.0",
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp-webserver": "^0.9.1",
-    "node-sass": "4.13.1"
+    "node-sass": "4.14.0"
   },
   "dependencies": {}
 }
