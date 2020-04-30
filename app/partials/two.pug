@@ -10,18 +10,12 @@ section#two.wrapper.alt.style2
     .image
       img(data-src="/images/law.jpg" alt=`${intl.two.job.alt}` data-js-lazy-image src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
     .content
-      h2 
-        | #{intl.two.job.title1}
-        br
-        |  #{intl.two.job.title2}
+      h2!= intl.two.job.title
       p= intl.two.job.message 
       
   section.spotlight
     .image
       img(data-src="/images/marathon.jpg" alt=`${intl.two.hobbies.alt}` data-js-lazy-image src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
     .content
-      h2 
-        | #{intl.two.hobbies.title1}
-        br
-        |  #{intl.two.hobbies.title2}
+      h2!= intl.two.hobbies.title
       p= intl.two.hobbies.message
