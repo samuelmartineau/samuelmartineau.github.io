@@ -1,4 +1,4 @@
-var cacheStorageKey = "samuel-martineau-v3";
+var cacheStorageKey = "samuel-martineau-v4";
 var cacheList = [
     "/",
     "/index.html",
@@ -14,7 +14,7 @@ var cacheList = [
     "/images/projects/gulp.jpg",
     "/images/projects/website.jpg",
     "/images/projects/merrycrosstmas.jpg",
-    "/images/samuelmartineau.jpg"
+    "/images/samuelmartineau.jpg",
 ];
 
 self.addEventListener("install", function (e) {
