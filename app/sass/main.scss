@@ -15,7 +15,7 @@
     large: "(max-width: 1280px)",
     medium: "(max-width: 980px)",
     small: "(max-width: 736px)",
-    xsmall: "(max-width: 480px)"
+    xsmall: "(max-width: 480px)",
   )
 );
 
@@ -23,8 +23,8 @@
   (
     boxModel: "border",
     grid: (
-      gutters: 1.5em
-    )
+      gutters: 1.5em,
+    ),
   )
 );
 
@@ -66,8 +66,8 @@ body {
 }
 
 a {
-      transition: color #{_duration(transitions)} ease;
-      transition: border-bottom-color #{_duration(transitions)} ease;
+  transition: color #{_duration(transitions)} ease;
+  transition: border-bottom-color #{_duration(transitions)} ease;
   border-bottom: dotted 1px;
   color: inherit;
   text-decoration: none;
@@ -341,8 +341,8 @@ ul {
 
 .button {
   appearance: none;
-      transition: background-color #{_duration(transitions)} ease-in-out;
-      transition: color #{_duration(transitions)} ease-in-out;
+  transition: background-color #{_duration(transitions)} ease-in-out;
+  transition: color #{_duration(transitions)} ease-in-out;
 
   background-color: transparent;
   border-radius: 3px;
@@ -756,7 +756,7 @@ ul {
   }
 
   .more {
-          transition: transform 0.75s ease, opacity 0.75s ease;
+    transition: transform 0.75s ease, opacity 0.75s ease;
     transition-delay: 3.5s;
     transform: translateY(0);
     border: none;
@@ -787,7 +787,7 @@ ul {
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      transition: all .15s ease-out;
+      transition: all 0.15s ease-out;
       bottom: 4em;
       content: "";
       display: block;
@@ -975,7 +975,12 @@ body.is-loading {
 
 body {
   #page-wrapper {
-    background-image: linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,.5)),url(/images/banner.jpg);
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(/images/banner.jpg);
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
